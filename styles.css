@@ -75,3 +75,9 @@ section { padding: clamp(40px, 6vw, 80px) 0; }
 .footer a:hover { color: var(--accent); }
 .badge { display: inline-block; padding: 4px 10px; border-radius: 999px; background: var(--soft);
   border: 1px solid var(--border); color: var(--muted); font-size: .78rem; }
+
+/* a11y 2026-10-10: AA contrast for accent text, underlined in-text links, visible focus */
+:root{--muted:#565d6a}
+.eyebrow{color:#00707d}
+p a:not(.button):not(.app-store-badge),li a:not(.button),.meta a,.footer a{color:#00707d;text-decoration:underline;text-underline-offset:2px}
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid currentColor;outline-offset:3px;border-radius:4px}
